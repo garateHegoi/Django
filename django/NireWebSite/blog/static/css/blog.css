@@ -1,0 +1,14 @@
+body {
+ padding-left: 15px;
+}
+h1
+{
+ color: blue;
+ font-family: 'Ruslan Display', cursive;
+}
+post {
+ margin-bottom: 70px;
+}
+.save {
+ float: right;
+}

@@ -1,0 +1,70 @@
+{% load static %}
+<html>
+<head>
+    <title>Prueba</title>
+    <link href="https://fonts.googleapis.com/css?family=Ruslan+Display" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstraptheme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+</head>
+<body>
+<!--<div style="background-image: url({% static 'e44.png' %});-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">-->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="page-header">
+                    <h1 class="col-sm-3">Prueba</h1>
+                </div>
+                <div class="post">
+                    <p>Aeneas eu leo qualm. Interpellates ornate sem niacin qualm
+                        venation vestibule. Done id elit non mi port gravid at wget metes. Fuse
+                        paribus, tells ac curses commode, tort Lauris condiment nib, ut ferment
+                        mass justo sit amet rises.</p>
+                    <br><br>
+                </div>
+            </div>
+            <div class="col">
+                <p>Aeneas eu leo qualm. Interpellates ornate sem niacin qualm
+                    venation vestibule. Done id elit non mi port gravid at wget metes. Fuse
+                    paribus, tells ac curses commode, tort Lauris condiment nib, ut f.</p>
+            </div>
+            <br><br>
+            <div class="col">
+                <table class="table table-hover">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">id</th>
+                        <th scope="col">author</th>
+                        <th scope="col">title</th>
+                        <th scope="col">prezioa</th>
+                        <th scope="col">text</th>
+                    </tr>
+                    </thead>
+                    {% for x in postak %}
+                    <tbody>
+                    <tr>
+                        <td><a href="update/{{ x.id }}">{{ x.id }}</a></td>
+                        <td>{{x.author}}</td>
+                        <td>{{x.title}}</td>
+                        <td>{{x.prezioa}}</td>
+                        <td>{{x.text|linebreaksbr}}</td>
+                        <td><a href="delete/{{ x.id }}">delete</a></td>
+                    </tr>
+                    </tbody>
+                    {% endfor %}
+                </table>
+                <p>Prezio guztia hau da : {{p}}</p>
+                <p>
+                    <a href="add/">Add</a>
+                </p>
+            </div>
+        </div>
+        <!--<img src="{% static '7994624.jpg' %}" class="center">-->
+    </div>
+<!--</div>-->
+</body>
+</html>

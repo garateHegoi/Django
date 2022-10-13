@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+</head>
+<body>
+<h1>Add</h1>
+
+<form action="addrecord/" method="post">
+    {% csrf_token %}
+    Author:<br>
+    <input name="author">
+    <br><br>
+    Title:<br>
+    <input name="title">
+    <br><br>
+    prezioa:<br>
+    <input name="prezioa">
+    <br><br>
+    Text:<br>
+    <input name="text">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

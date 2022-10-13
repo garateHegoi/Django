@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+</head>
+<body>
+<h1>Update</h1>
+
+<form action="updaterecord/{{ postak.id }}" method="post">
+    {% csrf_token %}
+    Author:<br>
+    <input name="author" value="{{ postak.author }}">
+    <br><br>
+    Title:<br>
+    <input name="title" value="{{ postak.title }}">
+    <br><br>
+    prezioa:<br>
+    <input name="prezioa" value="{{ postak.prezioa }}">
+    <br><br>
+    Text:<br>
+    <input name="text" value="{{ postak.text }}">
+    <br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
